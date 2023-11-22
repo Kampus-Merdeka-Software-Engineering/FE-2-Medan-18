@@ -1,159 +1,107 @@
-* {
-	box-sizing: border-box;
+ /* Styling for login form */
+ body {
+	font-family: Arial, sans-serif;
+	background-color: #f2f2f2;
+	background-size: cover;
+	background-image: url(img/Model\ 4.png);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
 	margin: 0;
-	padding: 0;	
-    max-width: 100%;
-	font-family: Raleway, sans-serif;
-}
-main{
-	padding-top: 8rem;
-}
-.container {
-	display: flex;
-	width: 100%;
-	align-items: center;
-	justify-content: center;
-	min-height: 100vh;
-	background-image: url("img/backgroundsate.jpg");
-	background-size:cover;
-}
-
-
-.screen {		
-	background: hsla(0, 2%, 56%, 0.5);
-	position: relative;	
-	height: 480px;
-	width: 500px;
-    border-radius: 20px;	
+  }
+  .slide {
+	width: 300px;
+	padding: 20px;
+	background-color:#b3480082; /* Transparent orange */
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  .slide h2 {
+	text-align: center;
+	margin-bottom: 20px;
+	color: #fff;
+  }
+  .slide form {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-
-.screen h3{
-	font-size: 32px;
-	font-weight: 600;
-	text-align: center;
-}
-
-.screen a{
-	font-size: 16px;
-	font-weight: 500;
-	text-align: center;
-}
-
-.screen__background {		
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 0;
-	-webkit-clip-path: inset(0 0 0 0);
-	clip-path: inset(0 0 0 0);	
-}
-
-
-.login {
-	width: 420px;
-	height: fit-content;
-	padding: 30px;
-	padding-top: 20px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
-.login__field {
-	padding: 20px 0px;	
-	position: relative;	
-}
-
-.login__field p{
-	color: black;
-	font-size: 16px;
-	font-weight: 500;
-	text-shadow: 2px 2px #9A9999;
-}
-.login__icon {
-	position: absolute;
-	top: 30px;
-	color: #7875B5;
-}
-
-
-.login__input {
+  }
+  .slide input {
+	margin-bottom: 10px;
+	padding: 8px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+  }
+  .slide button {
+	padding: 10px;
+	border-radius: 5px;
 	border: none;
-	border-bottom: 2px solid #D1D1D4;
-    border-top: 2px solid #D1D1D4;
-	background: #D1D1D4;
-	padding:10px;
-	padding-left: 10px;
-	font-weight: 700;
-	width: 360px;
-    height: 40px;
-    border-radius: 12px;
-	transition: .2s;
-}
-
-.login__input:active,
-.login__input:focus,
-.login__input:hover {
-	outline: none;
-	border-bottom-color: black;
-}
-.button__text{
-    color: #FFF;
-}
-.login__submit {
-	background: #000000;
-	font-size: 14px;
-	margin-top: 30px;
-	padding: 16px 20px;
-	border-radius: 26px;
-	border: 1px solid #D4D3E8;
-	text-transform: uppercase;
-	font-weight: 700;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
+	background-color: #d2601a;
+	color: white;
 	cursor: pointer;
-	transition: .2s;
-}
-
-.login__submit:active,
-.login__submit:focus,
-.login__submit:hover {
-	border-color: white;
-	outline: none;
-}
-
-.button__icon {
-	font-size: 24px;
-	margin-left: auto;
-	color: #7875B5;
-}
-
-
-
-
-.sosmed{
+  }
+  .toggle-container {
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
 	align-items: center;
-	width: 82px;
-	height: 24px;
-}
-
-footer{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 64px;
-	background-color: #3F3836;
-}
+	position: relative;
+	margin-bottom: 10px;
+  }
+  .toggle-container label {
+	font-size: 12px;
+	color: #fff;
+	margin-left: 5px; /* Membuat jarak antara checkbox dan teks */
+  }
+  .toggle-container input {
+	cursor: pointer;
+  }
+    /* Styling for sign-in form */
+	body {
+		font-family: Arial, sans-serif;
+		background-color: #f2f2f2;
+		background-size: cover;
+		background-image: url(img/Model\ 3.png);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		margin: 0;
+	  }
+	  .form-box {
+		width: 300px;
+		padding: 20px;
+		background-color: #b3480082; /* Transparent orange */
+		border-radius: 8px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	  }
+	  .form-box h2 {
+		text-align: center;
+		margin-bottom: 20px;
+		color: #fff;
+	  }
+	  .form-box form {
+		display: flex;
+		flex-direction: column;
+	  }
+	  .form-box input {
+		margin-bottom: 10px;
+		padding: 8px;
+		border-radius: 5px;
+		border: 1px solid #ccc;
+	  }
+	  .form-box button {
+		padding: 10px;
+		border-radius: 5px;
+		border: none;
+		background-color: #d2601a;
+		color: white;
+		cursor: pointer;
+	  }
+	  .checkbox-container {
+		display: flex;
+		align-items: center;
+	  }
+	  .checkbox-container label {
+		margin-left: 5px;
+		font-size: 12px;
+		color: #fff;
+	  }

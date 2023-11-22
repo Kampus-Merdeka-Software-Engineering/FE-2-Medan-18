@@ -1,34 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link rel="stylesheet" href="Login.css" /></link>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="Login.css">
+</head>
 <body>
-    <header-component></header-component>
-      <main>
-        <div class="container">
-          <div class="screen">
-            <h3>LOGIN</h3>
-            <form class="login">
-              <div class="login__field">
-                <p>Email</p>
-                <input type="text" class="login__input" placeholder="Email">
-              </div>
-              <div class="login__field">
-                <p>Password</p>
-                <input type="password" class="login__input" placeholder="Password">
-              </div>
-              <button class="button login__submit">
-                <span class="button__text">LOGIN</span>
-              </button>
-            </form>
-            <a style="text-decoration: none; color:#F46A06 ;" href="Sign_in.html"> SIGN IN</a>
-          </div>
-        </div>  
-      </main>
-      <footer-component></footer-component>
-  </body>
+  <div class="slide">
+    <h2>Login</h2>
+    <form onsubmit="return validateLogin()">
+      <input type="text" id="loginEmail" placeholder="Email" required>
+      <input type="password" id="loginPassword" placeholder="Password" minlength="8" required>
+      <div class="toggle-container">
+        <input type="checkbox" id="passwordToggle" onclick="togglePassword()">
+        <label for="passwordToggle">Show Password</label>
+      </div>
+      <button type="submit">Login</button>
+      <a style="text-decoration: none; color:#f5f4f4;" href="Sign_in.html"> Sign in</a>
+      <a style="text-decoration: none; color:#f5f4f4;" href="index.html"> Back </a>
+    </form>
+  </div>
+
+  <script>
+    function togglePassword() {
+      const passwordField = document.getElementById('loginPassword');
+      const fieldType = passwordField.getAttribute('type');
+      
+      if (fieldType === 'password') {
+        passwordField.setAttribute('type', 'text');
+      } else {
+        passwordField.setAttribute('type', 'password');
+      }
+    }
+
+    function validateLogin() {
+      const email = document.getElementById('loginEmail').value;
+      const password = document.getElementById('loginPassword').value;
+
+      // Menambahkan logika validasi sederhana di sini (dapat diubah sesuai kebutuhan)
+      const predefinedEmail = 'capstone@gmail.com';
+      const predefinedPassword = 'group18i';
+
+      if (email !== predefinedEmail || password !== predefinedPassword) {
+        alert('Invalid email or password. Please try again.');
+        return false;
+      }
+
+      window.location.href = 'index.html'; // Redirect ke halaman index setelah login berhasil
+      return false; // Return false to prevent form submission immediately
+    }
+  </script>
+</body>
 </html>
