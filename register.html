@@ -4,17 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Kuliner Kampoeng</title>
+    <title>Register - Kuliner Kampoeng</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="img/logo.png">
 </head>
 
 <body>
-    <!-- Login Section -->
+    <!-- Register Section -->
     <section class="login" id="login">
         <div class="wrapper">
             <form action="#">
-                <h2>Login</h2>
+                <h2>Register</h2>
+                <div class="input-field">
+                    <input type="text" required>
+                    <label>Enter your name</label>
+                </div>
                 <div class="input-field">
                     <input type="text" required>
                     <label>Enter your email</label>
@@ -23,16 +27,9 @@
                     <input type="password" required>
                     <label>Enter your password</label>
                 </div>
-                <div class="forget">
-                    <label for="remember">
-                        <input type="checkbox" id="remember">
-                        <p>Remember me</p>
-                    </label>
-                    <a href="#">Forgot password?</a>
-                </div>
-                <button type="submit">Log In</button>
+                <button type="submit">Register</button>
                 <div class="register">
-                    <p>Don't have an account? <a href="register.html">Register</a> or <a href="index.html">Back to Home</a></p>
+                    <p>Have an account? <a href="login.html">Login</a> or <a href="index.html">Back to Home</a></p>
                 </div>
             </form>
         </div>

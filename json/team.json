@@ -1,0 +1,51 @@
+[
+    {
+        "name": "Nadiyatul Jenni",
+        "role": "Project Leader",
+        "university": "Universitas Negeri Padang",
+        "major": "Teknik Pertambangan",
+        "image": "img/team-nadiya.jpg"
+    },
+    {
+        "name": "Kamilah Aulia Azzahra",
+        "role": "Front End Engineer",
+        "university": "Universitas Krisnadwipayana",
+        "major": "Teknik Informatika",
+        "image": "img/team-mila.jpg"
+    },
+    {
+        "name": "Lisa Fatma Hatuina",
+        "role": "Front End Engineer",
+        "university": "Universitas Pattimura",
+        "major": "Kimia",
+        "image": "img/team-lisa.jpg"
+    },
+    {
+        "name": "Ananda Rossy Kurniawan",
+        "role": "Back End Engineer",
+        "university": "Universitas Negeri Surabaya",
+        "major": "Fisika",
+        "image": "img/team-rossy.png"
+    },
+    {
+        "name": "Alex Kumara",
+        "role": "Back End Engineer",
+        "university": "Universitas Negeri Semarang",
+        "major": "Pendidikan Bahasa Prancis",
+        "image": "img/team-alex.jpg"
+    },
+    {
+        "name": "Anggi Deprison",
+        "role": "Quality Assurance",
+        "university": "Universitas Andalas",
+        "major": "Ilmu Ekonomi",
+        "image": "img/team-anggi.jpg"
+    },
+    {
+        "name": "Sahabudin Iqbal",
+        "role": "Quality Assurance",
+        "university": "Universitas Muhammadiyah Sumatera Utara",
+        "major": "Teknik Elektro",
+        "image": "img/team-iqbal.jpg"
+    }
+]

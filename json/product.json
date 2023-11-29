@@ -1,0 +1,63 @@
+[
+    {
+        "id": 1,
+        "name": "Bika Ambon",
+        "price": 45000,
+        "image": "img/menu-bikaambon.png"
+    },
+    {
+        "id": 2,
+        "name": "Es Cendol",
+        "price": 15000,
+        "image": "img/menu-cendol.png"
+    },
+    {
+        "id": 3,
+        "name": "Es Teler",
+        "price": 18000,
+        "image": "img/menu-esteler.png"
+    }
+    ,
+    {
+        "id": 4,
+        "name": "Kerak Telor",
+        "price": 12000,
+        "image": "img/menu-keraktelor.png"
+    },
+    {
+        "id": 5,
+        "name": "Kue Talam",
+        "price": 40000,
+        "image": "img/menu-kuetalam.png"
+    },
+    {
+        "id": 6,
+        "name": "Nasi Kuning",
+        "price": 12000,
+        "image": "img/menu-nasikuning.png"
+    },
+    {
+        "id": 7,
+        "name": "Rawon",
+        "price": 15000,
+        "image": "img/menu-rawon.png"
+    },
+    {
+        "id": 8,
+        "name": "Rendang",
+        "price": 18000,
+        "image": "img/menu-rendang.png"
+    },
+    {
+        "id": 9,
+        "name": "Sate Lilit",
+        "price": 20000,
+        "image": "img/menu-satelilit.png"
+    },
+    {
+        "id": 10,
+        "name": "Soto Ayam",
+        "price": 12000,
+        "image": "img/menu-soto.png"
+    }
+]

@@ -1,679 +1,174 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>MEDAN 18</title>
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuliner Kampoeng - Medan 18</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+    
+    <!-- Header and Navigation Section -->
+    <header>
+        <a href="#"><img class="logo" src="img/logo-horizontal-white.png" alt="logo"></a>
+        <ul class="navbar">
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="history.html">History</a></li>
+        </ul>
+        <div class="iconCart">
+            <div class="fa-2xl fas fa-shopping-cart"></div>
+            <div class="totalQuantity">0</div>
+        </div>
+    </header>
 </head>
+
 <body>
-	<!-- header section start -->
-	<header>
-		<a href="#" class="logo"><img src="img/Logo Group 18.png"></a>
-
-		<nav class="navbar">
-			<a href="#home" class="active"><strong>home</strong></a>
-			<a href="#about"><strong>about</strong></a>
-			<a href="#menu"><strong>menu</strong></a>
-			<a href="#reservation"><strong>reservation</strong></a>
-			<a href="#team"><strong>team</strong></a>
-		</nav>
-
-		<div class="icons">
-			<i class="fas fa-bars" id="menu"></i>
-			<i class="fas fa-search"></i>
-			<i class="fas fa-shopping-cart"></i>
-			<i class="fas fa-bars" id="menu-toggle"></i>
-			<a onclick="redirectToLogin()">
-				<i class="fas fa-sign-in-alt"></i></a>				
-			</div>
-			
-		</div>
-	</header>
-	<!-- header section end -->
-
-	<!-- slider section start -->
-	<div class="home" id="home">
-		<div class="swiper home-slider">
-			<div class="swiper-wrapper wrapper">
-				<div class="swiper-slide slide slide1">
-					<div class="content">
-						
-
-						<h3><strong>Hadir!</strong></h3>
-						<h1>Kuliner Kampoeng</h1>
-						<p>
-							<strong>Pesan Makananmu Sekarang</strong> 
-						</p>
-						<a href="#" class="btn">order now</a>
-					</div>
-				</div>
-
-				<div class="swiper-slide slide slide2">
-					<div class="content">
-						
-
-						<h3><strong>Diskon Hari ini!</strong></h3>
-						<h1>Rasakan kelezatan</h1>
-						<p>
-							<strong>Temukan kelezatan dengan satu klik</strong>
-						</p>
-						<a href="#" class="btn">order now</a>
-					</div>
-				</div>
-
-				<div class="swiper-slide slide slide3">
-					<div class="content">
-						
-
-						<h3><strong>Promo Eksklusif!</strong></h3>
-						<h1>memberikan voucher</h1>
-						<p>
-							<strong>Potongan harga untuk setiap pembelian</strong>
-						</p>
-						<a href="#" class="btn">order now</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="swiper-pagination"></div>
-		</div>
-	</div>
-	<!-- slider section ends -->
-
-	<!-- welcome section start -->
-	<section class="welcome" id="about">
-		<h1 class="heading">WELCOME TO KULINER KAMPOENG</h1>
-		<center><h3 class="sub-heading"> <strong>~ BEST SELLER ~</strong> </h3></center>
-
-		<div class="box-container">
-			<div class="box">
-				<div class="image">
-					<img src="img/sate lilit.png">
-				</div>
-
-				<div class="content">
-					<h3><strong>SATE LILIT</strong></h3>
-					<p>Sate lilit adalah hidangan khas Bali yang terbuat dari daging cincang yang dicampur dengan rempah-rempah seperti bawang, serai, kemiri, dan kelapa parut. Awalnya, hidangan ini disajikan pada ritual keagamaan di Bali. Proses pemanggangan yang menggunakan bambu untuk menyate daging kemudian berkembang menjadi cara utama penyajiannya. Sate lilit menjadi favorit wisatawan karena cita rasanya yang unik dan merupakan simbol kekayaan kuliner Bali yang khas.</p>
-
-					<a href="#" class="btn">Order Now</a>
-				</div>
-			</div>
-
-			<div class="box">
-				<div class="image">
-					<img src="img/Es Teller.png">
-				</div>
-
-				<div class="content">
-					<h3><strong>ES TELER</strong></h3>
-					<p>Es Teler adalah minuman khas Indonesia yang terdiri dari campuran potongan buah-buahan seperti alpukat, kelapa muda, kelapa parut, dan nangka yang disajikan dengan es serut dan sirup gula aren. Ciptaan Ibu Titi Muswati pada tahun 1982 ini terinspirasi dari keinginan untuk menciptakan minuman menyegarkan dengan memanfaatkan bahan lokal. Es Teler menjadi populer dan mendapat tempat di hati masyarakat Indonesia karena rasa segar dan kaya akan variasi buah-buahan tropisnya.</p>
-
-					<a href="#" class="btn">Order Now</a>
-				</div>
-			</div>
-
-			<div class="box">
-				<div class="image">
-					<img src="img/kue talam.png">
-				</div>
-
-				<div class="content">
-					<h3><strong>KUE TALAM</strong></h3>
-					<p>Kue Talam adalah kudapan tradisional Indonesia. Berakar dari budaya lokal, kue ini memiliki sejarah panjang dalam pembuatan kue tradisional dengan campuran beras dan santan. Bentuknya menyerupai talam, alat masak tradisional. Awalnya dikenal sebagai kue pembuka acara adat, kemudian menjadi camilan populer. Variasi bahan dan teknik membuatnya beragam di setiap daerah. Kini, Kue Talam tetap menjadi simbol warisan kuliner Indonesia yang lezat dan berwarna lokal.</p>
-
-					<a href="#" class="btn">Order Now</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- welcome section start -->
-
-	<!-- menu section start -->
-	<div class="menu" id="Menu">
-		<h1>OUR MENU</h1>
-
-		<div class="menu_box">
-			<div class="menu_card">
-
-				<div class="menu_image">
-					<img src="img/Es Teller.png">
-				</div>
-
-				<div class="small_card">
-					<i class="fa-solid fa-heart"></i>
-				</div>
-
-				<div class="menu_info">
-					<h2>es teler</h2>
-					<h3>Rp 12.000</h3>
-					<div class="menu_icon">
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star-half-stroke"></i>
-					</div>
-					<a href="#" class="menu_btn">Order Now</a>
-				</div>
-
-			</div> 
-			
-			<div class="menu_card">
-
-				<div class="menu_image">
-					<img src="img/kerak telor.png">
-				</div>
-
-				<div class="small_card">
-					<i class="fa-solid fa-heart"></i>
-				</div>
-
-				<div class="menu_info">
-					<h2>Kerak Telor</h2>
-					<h3>Rp 25.000</h3>
-					<div class="menu_icon">
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star-half-stroke"></i>
-					</div>
-					<a href="#" class="menu_btn">Order Now</a>
-				</div>
-
-			</div> 
-
-			<div class="menu_card">
-
-				<div class="menu_image">
-					<img src="img/kue talam.png">
-				</div>
-
-				<div class="small_card">
-					<i class="fa-solid fa-heart"></i>
-				</div>
-
-				<div class="menu_info">
-					<h2>Kue Talam</h2>
-					<h3>Rp 5.000</h3>
-					<div class="menu_icon">
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star-half-stroke"></i>
-					</div>
-					<a href="#" class="menu_btn">Order Now</a>
-				</div>
-
-			</div> 
-
-			<div class="menu_card">
-
-				<div class="menu_image">
-					<img src="img/lempah kuning.png">
-				</div>
-
-				<div class="small_card">
-					<i class="fa-solid fa-heart"></i>
-				</div>
-
-				<div class="menu_info">
-					<h2>Lempah Kuning</h2>
-					<h3>Rp 30.000</h3>
-					<div class="menu_icon">
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star-half-stroke"></i>
-					</div>
-					<a href="#" class="menu_btn">Order Now</a>
-				</div>
-
-			</div> 
-
-			<div class="menu_card">
-
-				<div class="menu_image">
-					<img src="img/lompong sagu.png">
-				</div>
-
-				<div class="small_card">
-					<i class="fa-solid fa-heart"></i>
-				</div>
-
-				<div class="menu_info">
-					<h2>Lompong Sagu</h2>
-					<h3>Rp 5.000</h3>
-					<div class="menu_icon">
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star-half-stroke"></i>
-					</div>
-					<a href="#" class="menu_btn">Order Now</a>
-				</div>
-
-			</div> 
-
-			<div class="menu_card">
-
-				<div class="menu_image">
-					<img src="img/bika ambon.png">
-				</div>
-
-				<div class="small_card">
-					<i class="fa-solid fa-heart"></i>
-				</div>
-
-				<div class="menu_info">
-					<h2>Bika Ambon</h2>
-					<h3>Rp 45.000</h3>
-					<div class="menu_icon">
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star-half-stroke"></i>
-					</div>
-					<a href="#" class="menu_btn">Order Now</a>
-				</div>
-
-			</div> 
-
-			<div class="menu_card">
-
-				<div class="menu_image">
-					<img src="img/bandrek.png">
-				</div>
-
-				<div class="small_card">
-					<i class="fa-solid fa-heart"></i>
-				</div>
-
-				<div class="menu_info">
-					<h2>bandrek</h2>
-					<h3>Rp 10.000</h3>
-					<div class="menu_icon">
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star-half-stroke"></i>
-					</div>
-					<a href="#" class="menu_btn">Order Now</a>
-				</div>
-
-			</div> 
-
-			<div class="menu_card">
-
-				<div class="menu_image">
-					<img src="img/nasi kuning.png">
-				</div>
-
-				<div class="small_card">
-					<i class="fa-solid fa-heart"></i>
-				</div>
-
-				<div class="menu_info">
-					<h2>Nasi Kuning</h2>
-					<h3>Rp 30.000</h3>
-					<div class="menu_icon">
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star-half-stroke"></i>
-					</div>
-					<a href="#" class="menu_btn">Order Now</a>
-				</div>
-
-			</div> 
-
-			<div class="menu_card">
-
-				<div class="menu_image">
-					<img src="img/onde-onde.jpg">
-				</div>
-
-				<div class="small_card">
-					<i class="fa-solid fa-heart"></i>
-				</div>
-
-				<div class="menu_info">
-					<h2>Onde-Onde</h2>
-					<h3>Rp 7.000</h3>
-					<div class="menu_icon">
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star-half-stroke"></i>
-					</div>
-					<a href="#" class="menu_btn">Order Now</a>
-				</div>
-
-			</div> 
-
-			<div class="menu_card">
-
-				<div class="menu_image">
-					<img src="img/Cendol.png">
-				</div>
-
-				<div class="small_card">
-					<i class="fa-solid fa-heart"></i>
-				</div>
-
-				<div class="menu_info">
-					<h2>Cendol</h2>
-					<h3>Rp 12.000</h3>
-					<div class="menu_icon">
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star-half-stroke"></i>
-					</div>
-					<a href="#" class="menu_btn">Order Now</a>
-				</div>
-
-			</div> 
-
-			<div class="menu_card">
-
-				<div class="menu_image">
-					<img src="imG/sate lilit.png">
-				</div>
-
-				<div class="small_card">
-					<i class="fa-solid fa-heart"></i>
-				</div>
-
-				<div class="menu_info">
-					<h2>Sate Liit</h2>
-					<h3>Rp 15.000</h3>
-					<div class="menu_icon">
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star-half-stroke"></i>
-					</div>
-					<a href="#" class="menu_btn">Order Now</a>
-				</div>
-
-			</div> 
-
-			<div class="menu_card">
-
-				<div class="menu_image">
-					<img src="img/rendang.png">
-				</div>
-
-				<div class="small_card">
-					<i class="fa-solid fa-heart"></i>
-				</div>
-
-				<div class="menu_info">
-					<h2>Rendang</h2>
-					<h3>Rp 40.000</h3>
-					<div class="menu_icon">
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star-half-stroke"></i>
-					</div>
-					<a href="#" class="menu_btn">Order Now</a>
-				</div>
-
-			</div> 
-			
-		</div>
-
-	</div>
-	<!-- menu section end -->
-
-	<!-- reservation section start -->
-		<div class="reservation" id="reservation">
-			<div class="image">
-				
-			</div>
-
-			<div class="form">
-				<h1 class="heading">book a table</h1>
-				<center><h3 class="sub-heading"><strong>~ check out our place ~</strong> </h3></center>
-
-				<form>
-					<div class="form-holder">
-						<div>
-							<select>
-								<option>1 people</option>
-								<option>2 people</option>
-								<option>3 people</option>
-								<option>4 people</option>
-							</select>
-
-							<input type="text" name="" placeholder="Time">
-							<input type="text" name="" placeholder="Phone">
-						</div>
-
-						<div>
-							<input type="text" name="" placeholder="Date">
-							<input type="text" name="" placeholder="Name">
-							<input type="email" name="" placeholder="email">
-						</div>
-					</div>
-					<center><a href="#" class="btn">Book now</a></center>
-				</form>
-			</div>
-		</div>
-	<!-- reservation section ends -->
-	<!-- our team section start -->
-	<section class="our-team" id="team">
-		<h1 class="heading"> TEAM GROUP 18</h1>
-		<center>
-			<h3 class="sub-heading"> <strong>~ MEET OUR TEAM~</strong> </h3>
-		</center>
-            <div class="baris">
-                <div class="flip_card">
-                    <div class="flip">
-                        <div class="front">
-                            <img src="img/Nadiya.JPG">
-                            <h3>Nadiyatul Jenni</h3>
-                            <h4>Project Leader</h4>
-                        </div>
-                        <div class="back">
-                            <p>Universitas Negeri Padang</p>
-                            <p>Teknik Pertambangan</p>
-                        </div>
+    <!-- Slider Section -->
+    <section id="slider">
+        <div class="slider">
+            <div class="listSlider">
+                <div class="item active">
+                    <img src="img/bakground-default.jpg">
+                    <div class="content">
+                        <p><b>Kuliner Kampoeng</b></p>
+                        <h2>Nusantara</h2>
+                        <p>
+                            Selamat datang di dunia cita rasa autentik Indonesia! Temukan kekayaan kuliner lokal terbaik yang menggoda lidah Anda.
+                        </p>
                     </div>
                 </div>
-    
-                <div class="flip_card">
-                    <div class="flip">
-                        <div class="front">
-                            <img src="img/Mila.jpg">
-                            <h3>Kamilah Aulia Azzahra</h3>
-                            <h4>Front End Engineer</h4>
-                        </div>
-                        <div class="back">
-                            <p>Universitas Krisnadwipayana</p>
-                            <p>Teknik Informatika</p>
-                        </div>
+                <div class="item">
+                    <img src="img/background-nasigoreng.jpg">
+                    <div class="content">
+                        <p><b>Kuliner Kampoeng</b></p>
+                        <h2>Nasi Goreng</h2>
+                        <p>
+                            Sambut sensasi nasi goreng yang autentik dan memikat selera di sini! Dengan bumbu rahasia dan keahlian memasak yang terjaga, hadirkan kehangatan dan kenikmatan lezat Nasi Goreng Indonesia langsung ke meja makan Anda.
+                        </p>
                     </div>
                 </div>
-    
-                <div class="flip_card">
-                    <div class="flip">
-                        <div class="front">
-                            <img src="img/Lisa.jpg">
-                            <h3>Lisa Fatma Hatuina</h3>
-                            <h4>Front End Engineer</h4>
-                        </div>
-                        <div class="back">
-                            <p>Universitas Pattimura</p>
-                            <p>Kimia</p>
-                        </div>
+                <div class="item">
+                    <img src="img/background-soto1.jpg">
+                    <div class="content">
+                        <p><b>Kuliner Kampoeng</b></p>
+                        <h2>Soto</h2>
+                        <p>
+                            Selamat datang di dunia Soto, di mana harmoni rempah-rempah dan kuah gurih memeluk setiap suapan. Temukan kelezatan cita rasa Indonesia yang autentik melalui pengalaman kuliner Soto yang tak terlupakan di sini.
+                        </p>
                     </div>
                 </div>
-            
-                <div class="flip_card">
-                    <div class="flip">
-                        <div class="front">
-                            <img src="img/Rossy.png">
-                            <h3>Ananda Rossy Kurniawan</h3>
-                            <h4>Back End Engineer</h4>
-                        </div>
-                        <div class="back">
-                            <p>Universitas Negeri Surabaya</p>
-                            <p>Fisika</p>
-                        </div>
+                <div class="item">
+                    <img src="img/background-tahusumedang.jpg">
+                    <div class="content">
+                        <p><b>Kuliner Kampoeng</b></p>
+                        <h2>Tahu Sumedang</h2>
+                        <p>
+                            Rasakan keunikan Tahu Sumedang, kelezatan tahu goreng renyah dilengkapi dengan cita rasa yang khas. Mari jelajahi sensasi gurih dan nikmatnya Tahu Sumedang yang melekat dalam setiap potongan.
+                        </p>
                     </div>
                 </div>
-    
-                <div class="flip_card">
-                  <div class="flip">
-                      <div class="front">
-                          <img src="img/alex.jpg">
-                          <h3>Alex Kumara</h3>
-                          <h4>Back End Engineer</h4>
-                      </div>
-                      <div class="back">
-                          <p>Universitas Negeri Semarang</p>
-                          <p>Pendidikan Bahasa Prancis</p>
-                      </div>
-                  </div>
-              </div>
-
-              <div class="flip_card">
-                <div class="flip">
-                    <div class="front">
-                        <img src="img/Anggi.jpg">
-                        <h3>Anggi Deprison</h3>
-                        <h4>Quality Assurance</h4>
-                    </div>
-                    <div class="back">
-                        <p>Universitas Andalas</p>
-                        <p>Ilmu Ekonomi</p>
+                <div class="item">
+                    <img src="img/menu-keraktelor.png">
+                    <div class="content">
+                        <p><b>Kuliner Kampoeng</b></p>
+                        <h2>Kerak Telor</h2>
+                        <p>
+                            Selamat datang di dunia cita rasa Jakarta! Hadirkan kehangatan kota melalui pengalaman kuliner Kerak Telor, makanan tradisional yang menggabungkan kelezatan telur, beras ketan, dan rempah-rempah yang memikat selera.
+                        </p>
                     </div>
                 </div>
             </div>
 
-                <div class="flip_card">
-                    <div class="flip">
-                        <div class="front">
-                            <img src="img/Iqbal.jpg">
-                            <h3>Sahabudin Iqbal</h3>
-                            <h4>Quality Assurance</h4>
-                        </div>
-                        <div class="back">
-                            <p>Universitas Muhammadiyah Sumatera Utara</p>
-                            <p>Teknik Elektro</p>
-                        </div>
-                    </div>
+            <!-- Button Arrows -->
+            <div class="arrows">
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div>
+
+            <!-- Thumbnail -->
+            <div class="thumbnail">
+                <div class="item active">
+                    <img src="img/bakground-default.jpg">
+                </div>
+                <div class="item">
+                    <img src="img/background-nasigoreng.jpg">
+                </div>
+                <div class="item">
+                    <img src="img/background-soto1.jpg">
+                </div>
+                <div class="item">
+                    <img src="img/background-tahusumedang.jpg">
+                </div>
+                <div class="item">
+                    <img src="img/menu-keraktelor.png">
                 </div>
             </div>
         </div>
-	</section>
-	<!-- our team section ends -->
+    </section>
 
-	<!-- footer section start -->
-	<section class="footer">
-		<img src="img/Logo Group 18.png" class="logo" width="80" height="80">
+    <!-- Menu Section -->
+    <section id="menu">
+        <div class="container">
+            <h1>Our Menu</h1>
+            <p>Kami persembahkan sebuah pengalaman kuliner yang autentik dan memikat, mengajak pengunjung untuk menjelajahi ragam cita rasa tradisional dari berbagai kampoeng di seluruh dunia. Nikmati perjalanan kuliner yang tak terlupakan melalui kuliner-kuliner khas kampoeng yang disajikan dengan keindahan cerita di setiap hidangan.</p>
+            <div class="listProduct">
+                <div class="item">
+                    <!-- Items will be added dynamically here -->
+                </div>
+            </div>
+        </div>
+    </section>
 
-		<div class="container">
-			<div>
-				<h3>ABOUT US</h3>
-				<p>SECTION MEDAN</p>
-				<p>TEAM I</p>
-				<P>GROUP 18</P>
-			</div>
+    <!-- Cart Section -->
+    <section id="cart">
+        <div class="cart">
+            <h2>Cart</h2>
+            <div class="listCart">
+                <div class="item">
+                    <!-- Items will be added dynamically here -->
+                </div>
+            </div>
 
-			<div>
-				<h3>GET NEWS & OFFERS</h3>
-				<input type="email" name="" placeholder="enter your email">
-				<ul>
-					<li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-					<li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-					<li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
-					<li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-				</ul>
-			</div>
-			
-			<div>
-				<h3>CONTACT US</h3>
-				<span>GROUP 18i</span>
-				<span>+ (62) 81461156678</span>
-				<span>Medan18i@gmail.com</span>
-			</div>
-		</div>
+            <div class="buttons">
+                <div class="close">CLOSE</div>
+                <div class="checkout">
+                    <a href="checkout.html">CHECKOUT</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-		<p>&copy;2023 Reserved by SECTION MEDAN Group 18i</p>
-	</section>
-	<!-- footer section end -->
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <div class="container">
+            <div class="row">
+                <h1>Our Team</h1>
+            </div>
+            <div class="row team-card">
+                <!-- Team's card will be added dynamically here -->
+            </div>
+        </div>
+    </section>
 
-	<!-- jump to top -->
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-bottom">
+            <p>©2023 Reserved by Section Medan [Group 18i]</p>
+            <ul class="socials">
+                <li><a href="https://wa.me/+6282384630991"><i class="fab fa-whatsapp"></i></a></li>
+                <li><a href="mailto:medan18i@gmail.com"><i class="fa fa-envelope"></i></a></li>
+                <li><a href="https://instagram.com"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+    
+<!-- jump to top -->
+<a href="#"><button class="topbtn"><i class="fa-solid fa-angle-up"></i></button></a>
 
-	<a href="#"><button class="topbtn"><i class="fa-solid fa-angle-up"></i></button></a>
-
-
-	<!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".home-slider", {
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: {
-          delay: 7500,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        loop:true,
-      });
-    </script>
-	<script type="text/javascript">
-		let menu = document.querySelector('#menu');
-		let navbar = document.querySelector('.navbar');
-
-		menu.onclick = () =>{
-			menu.classList.toggle('fa-times');
-			navbar.classList.toggle('active');
-		}
-	</script>
-	<script>
-    function redirectToLogin() {
-        window.location.href = "Login.html";
-    }
-</script>
-<script>
-    function toggleMenuLinks() {
-        var menuLinks = document.querySelector('.menu-links');
-        menuLinks.style.display = (menuLinks.style.display === 'block' ? 'none' : 'block');
-    }
-    document.getElementById('menu-toggle').addEventListener('click', toggleMenuLinks);
-    document.getElementById('login-link').addEventListener('click', function () {
-        window.location.href = "Login.html"; 
-    });
-
-    document.getElementById('signin-link').addEventListener('click', function () {
-        window.location.href = "Sign_in.html"; 
-    });
-</script>
-
-
+    <script src="js/script.js"></script>
 </body>
+
 </html>
