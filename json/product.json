@@ -7,17 +7,16 @@
     },
     {
         "id": 2,
-        "name": "Es Cendol",
-        "price": 15000,
-        "image": "img/menu-cendol.png"
+        "name": "LempahKuning",
+        "price": 25000,
+        "image": "img/menu-lempahkuning.png"
     },
     {
         "id": 3,
-        "name": "Es Teler",
+        "name": "Bakso",
         "price": 18000,
-        "image": "img/menu-esteler.png"
-    }
-    ,
+        "image": "img/menu-bakso.jpeg"
+    },
     {
         "id": 4,
         "name": "Kerak Telor",
@@ -32,32 +31,92 @@
     },
     {
         "id": 6,
+        "name": "Nago Sari",
+        "price": 5000,
+        "image": "img/menu-nagosari.png"
+    },
+    {
+        "id": 7,
+        "name": "Lompong",
+        "price": 5000,
+        "image": "img/menu-lompongsagu.png"
+    },
+    {
+        "id": 8,
         "name": "Nasi Kuning",
         "price": 12000,
         "image": "img/menu-nasikuning.png"
     },
     {
-        "id": 7,
+        "id": 9,
         "name": "Rawon",
         "price": 15000,
         "image": "img/menu-rawon.png"
     },
     {
-        "id": 8,
+        "id": 10,
         "name": "Rendang",
         "price": 18000,
         "image": "img/menu-rendang.png"
     },
     {
-        "id": 9,
+        "id": 11,
         "name": "Sate Lilit",
         "price": 20000,
         "image": "img/menu-satelilit.png"
     },
     {
-        "id": 10,
+        "id": 12,
         "name": "Soto Ayam",
         "price": 12000,
         "image": "img/menu-soto.png"
+    },
+    {
+        "id": 13,
+        "name": "Bandrek",
+        "price": 8000,
+        "image": "img/menu-bandrek.png"
+    },
+    {
+        "id": 14,
+        "name": "Bir Pletok",
+        "price": 10000,
+        "image": "img/menu-BirPeletok.png"
+    },
+    {
+        "id": 15,
+        "name": "Es Campur",
+        "price": 15000,
+        "image": "img/menu-EsCampur.png"
+    },
+    {
+        "id": 16,
+        "name": "Es doger",
+        "price": 7000,
+        "image": "img/menu-esdoger.jpg"
+    },
+    {
+        "id": 17,
+        "name": "Sekoteng",
+        "price": 18000,
+        "image": "img/menu-Sekoteng.png"
+    },
+    {
+        "id": 18,
+        "name": "WedangRonde",
+        "price": 12000,
+        "image": "img/menu-wedangronde.jpg"
+    },
+    {
+        "id": 19,
+        "name": "Es Cendol",
+        "price": 15000,
+        "image": "img/menu-cendol.png"
+    },
+    {
+        "id": 20,
+        "name": "Es Teler",
+        "price": 18000,
+        "image": "img/menu-esteler.png"
     }
 ]
