@@ -97,15 +97,7 @@ header .totalQuantity {
     transform: translateX(20px);
     font-size: 15px;
 }
-input[type="text"] {
-    background-color: rgba(255, 255, 255, 0); 
-    border: 1px solid transparent; 
-    padding: 1px; 
-    box-shadow: var(--box-shadow);
-  }
-  input::placeholder {
-    color: white;
-  }
+  
 
 @media screen and (max-width: 991px) {
     header .iconCart {
@@ -896,116 +888,80 @@ body .login::before {
     color: #fff;
 }
 
+
 /* History Section */
-
-body .history {
-    background-color: #FFF;
-    min-height: 100vh;
-    margin: 0;
-    font-family: 'Droid Sans', sans-serif;
+.page-title {
+    text-align: center;
+    color: #e44d26;
+    margin-top: 20px;
 }
 
-body .history:before {
-    content: '';
-    position: fixed;
-    top: 0px;
-    left: 50%;
-    bottom: 0px;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    width: 4px;
-    background-color: #F13E15;
+.body {
+    line-height: 1.6;
 }
 
-body .history .entries {
-    width: calc(100% - 80px);
+.history {
     max-width: 800px;
-    margin: auto;
-    position: relative;
-    left: -5px;
+    margin: 50px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-body .history .entries .entry {
-    width: calc(50% - 80px);
-    float: left;
+.entries {
     padding: 20px;
-    clear: both;
-    text-align: right;
 }
 
-body .history .entries .entry:not(:first-child) {
-    margin-top: -60px;
+.entry {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
 }
 
-body .history .entries .entry .title {
-    font-size: 32px;
-    font-weight: 600;
-    margin-bottom: 12px;
-    position: relative;
-    color: #110F0E;
-}
-
-body .history .entries .entry .title a {
-    color: #110F0E;
-}
-
-body .history .entries .entry .title a:hover {
-    color: #F13E15;
-}
-
-body .history .entries .entry .title a:active {
-    color: #110F0E;
-}
-
-body .history .entries .entry .title:before {
-    content: '';
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    border: 4px solid #110F0E;
-    background-color: #FFF;
-    border-radius: 100%;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    right: -73px;
-    z-index: 1000;
-}
-
-body .history .entries .entry .title.big:before {
-    width: 24px;
-    height: 24px;
-    -webkit-transform: translate(8px, -50%);
-    transform: translate(8px, -50%);
-}
-
-body .history .entries .entry .body {
-    color: #403D3B;
-}
-
-body .history .entries .entry .body p {
-    line-height: 1.4em;
-    font-size: 16px;
-}
-
-body .history .entries .entry .body .address {
+.title {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.body {
+    line-height: 1.6;
 }
 
-body .history .entries .entry:nth-child(2n) {
-    text-align: left;
-    float: right;
+.address {
+    font-style: italic;
+    color: #777;
 }
 
-body .history .entries .entry:nth-child(2n) .title:before {
-    left: -63px;
+.menu {
+    font-weight: bold;
 }
 
-body .history .entries .entry:nth-child(2n) .title.big:before {
-    -webkit-transform: translate(-8px, -50%);
-    transform: translate(-8px, -50%);
+.price {
+    font-weight: bold;
 }
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e44d26;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #d03e20;
+}
+
+@media screen and (max-width: 600px) {
+    .history {
+        margin: 10px;
+    }
+    .button {
+        padding: 8px 16px;
+    }
+}
+
 
 /* Jump to Top */
 .topbtn {

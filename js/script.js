@@ -1,7 +1,8 @@
 let pathname = window.location.pathname;
 let filename = pathname.split("/").pop();
 let listCart = [];
-
+let userID = null;
+const API_BASE_URL = "https://be-2-medan-18.up.railway.app";
 
 // for Checkout
 if (filename === "checkout.html") {
@@ -49,8 +50,186 @@ if (filename === "checkout.html") {
         totalQuantityHTML.innerText = totalQuantity;
         totalPriceHTML.innerText = 'Rp' + totalPrice;
     }
+
+    document.getElementById('checkoutForm').addEventListener('submit', async function (event) {
+        event.preventDefault();
+        checkCart();
+        getUserID();
+
+        const name = document.getElementById('name').value;
+        const phoneNumber = document.getElementById('phoneNumber').value;
+        const address = document.getElementById('address').value;
+        const accountNumber = document.getElementById('accountNumber').value;
+        const pinOrCvv = document.getElementById('pinOrCvv').value;
+
+        try {
+            listCart = listCart.filter(product => product !== null)
+            const response = await fetch(`${API_BASE_URL}/users/checkout`, {
+                method: 'POST',  // Change this to POST
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ userID, name, phoneNumber, address, accountNumber, pinOrCvv, listCart }),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                console.log('Checkout successful.');
+            } else {
+                console.error('Checkout failed:', data.error);
+            }
+        } catch (error) {
+            console.error('Error during checkout:', error.message);
+        }
+    });
+
+    updateCart();
+    getUserID();
 }
 
+// for Register
+else if (filename === "register.html") {
+    document.getElementById('registerForm').addEventListener('submit', async function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        try {
+            const response = await fetch(`${API_BASE_URL}/users/register`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name, email, password }),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                console.log('Registration successful:', data);
+            } else {
+                console.error('Registration failed:', data.error);
+            }
+        } catch (error) {
+            console.error('Error during registration:', error.message);
+        }
+    });
+}
+
+// Function to fetch and display purchase history
+else if (filename === "history.html") {
+    async function getHistoryByUserID(userID) {
+        try {
+            const response = await fetch(`${API_BASE_URL}/users/history?userID=${userID}`);
+            const data = await response.json();
+
+            if (response.ok) {
+                console.log('User History:', data);
+                // Display history entries on the page
+                renderHistory(data);
+            } else {
+                console.error('Error retrieving user history:', data.error);
+            }
+        } catch (error) {
+            console.error('Error during history retrieval:', error.message);
+        }
+    }
+
+    // Function to render history entries on the page
+    function renderHistory(historyData) {
+        const historyEntries = document.getElementById('historyEntries');
+
+        // Clear existing entries
+        historyEntries.innerHTML = '';
+
+        // Loop through historyData and create HTML entries
+        historyData.forEach(historyEntry => {
+            const entryDiv = document.createElement('div');
+            entryDiv.classList.add('entry');
+
+            // Format date using Date object
+            const formattedDate = new Date(historyEntry.date).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+            });
+
+            entryDiv.innerHTML = `
+                <div class="title">${formattedDate}</div>
+                <div class="body">
+                    <p class="name">${historyEntry.name}</p>
+                    <p class="address">${historyEntry.address}</p>
+                    <p class="nohp">${historyEntry.phoneNumber}</p>
+                    <p class="menu">${getMenuList(historyEntry.listCart)}</p>
+                    <p class="quantity">Quantity: ${getitem.quantity}</p>
+                    <p class="price">Total Price: Rp ${getTotalPrice(historyEntry.listCart)}</p>
+                </div>
+            `;
+
+            historyEntries.appendChild(entryDiv);
+        });
+    }
+
+    // Helper function to get a formatted list of menu names
+    function getMenuList(listCart) {
+        return listCart.map(item => item.name).join(', ');
+    }
+
+    // Helper function to calculate the total price
+    function getTotalPrice(listCart) {
+        return listCart.reduce((total, item) => total + item.price * item.quantity, 0);
+    }
+
+    getUserID();
+    if (userID) {
+        getHistoryByUserID(userID);
+    }
+}
+
+
+
+
+
+// for Login
+else if (filename === "login.html") {
+    document.getElementById('loginForm').addEventListener('submit', async function (event) {
+        event.preventDefault();
+
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        try {
+            const response = await fetch(`${API_BASE_URL}/users/login`, {
+                method: 'POST',  // Change this to POST
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, password }),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                const expirationDate = new Date();
+                
+                // Set the expiration to 7 days from now
+                expirationDate.setDate(expirationDate.getDate() + 7);
+                document.cookie = `userID=${data.userID}; expires=${expirationDate.toUTCString()}; path=/;`;
+
+                console.log('Login successful. User ID:', data.userID);
+            } else {
+                console.error('Login failed:', data.error);
+            }
+        } catch (error) {
+            console.error('Error during login:', error.message);
+        }
+    });
+
+    getUserID();
+}
 
 // for Index
 else {
@@ -85,7 +264,7 @@ else {
             teams = data;
             addTeamToHTML();
         })
-    
+
     // Event cart click
     iconCart.addEventListener('click', function () {
         if (cart.style.right == '-100%') { cart.style.right = '0'; }
@@ -279,12 +458,22 @@ else {
         document.cookie = "listCart=" + JSON.stringify(listCart) + "; expires=Thu, 31 Dec 2025 23:59:59 UTC; path=/;";
         addCartToHTML(); // Reload HTML view cart
     }
+
+    updateCart();
+    getUserID();
 }
 
 // Common script for both pages
-function updateCart(){
+function updateCart() {
     checkCart();
     addCartToHTML();
 }
 
-updateCart();
+function getUserID() {
+    var cookieValue = document.cookie
+        .split('; ')
+        .find(row => row.startsWith('userID='));
+    if (cookieValue) {
+        userID = JSON.parse(cookieValue.split('=')[1]);
+    }
+}
