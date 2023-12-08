@@ -76,6 +76,7 @@ if (filename === "checkout.html") {
 
             if (response.ok) {
                 console.log('Checkout successful.');
+                window.location.href = 'history.html';
             } else {
                 console.error('Checkout failed:', data.error);
             }
@@ -110,6 +111,7 @@ else if (filename === "register.html") {
 
             if (response.ok) {
                 console.log('Registration successful:', data);
+                window.location.href = 'login.html';
             } else {
                 console.error('Registration failed:', data.error);
             }
@@ -163,8 +165,7 @@ else if (filename === "history.html") {
                     <p class="name">${historyEntry.name}</p>
                     <p class="address">${historyEntry.address}</p>
                     <p class="nohp">${historyEntry.phoneNumber}</p>
-                    <p class="menu">${getMenuList(historyEntry.listCart)}</p>
-                    <p class="quantity">Quantity: ${getitem.quantity}</p>
+                    <p class="menu">${getMenuWithQuantity(historyEntry.listCart)}</p>
                     <p class="price">Total Price: Rp ${getTotalPrice(historyEntry.listCart)}</p>
                 </div>
             `;
@@ -174,8 +175,8 @@ else if (filename === "history.html") {
     }
 
     // Helper function to get a formatted list of menu names
-    function getMenuList(listCart) {
-        return listCart.map(item => item.name).join(', ');
+    function getMenuWithQuantity(listCart) {
+        return listCart.map(item => `${item.name} (${item.quantity})`).join(', ');
     }
 
     // Helper function to calculate the total price
@@ -188,10 +189,6 @@ else if (filename === "history.html") {
         getHistoryByUserID(userID);
     }
 }
-
-
-
-
 
 // for Login
 else if (filename === "login.html") {
@@ -214,12 +211,13 @@ else if (filename === "login.html") {
 
             if (response.ok) {
                 const expirationDate = new Date();
-                
+
                 // Set the expiration to 7 days from now
                 expirationDate.setDate(expirationDate.getDate() + 7);
                 document.cookie = `userID=${data.userID}; expires=${expirationDate.toUTCString()}; path=/;`;
 
                 console.log('Login successful. User ID:', data.userID);
+                window.location.href = 'index.html';
             } else {
                 console.error('Login failed:', data.error);
             }
@@ -400,7 +398,11 @@ else {
             // If this product is already in the cart.
             listCart[$idProduct].quantity++;
         }
-        document.cookie = "listCart=" + JSON.stringify(listCart) + "; expires=Thu, 31 Dec 2025 23:59:59 UTC; path=/;";
+        
+        // Set the expiration to 1 years from now
+        const expirationDate = new Date();
+        expirationDate.setDate(expirationDate.getDate() + 365);
+        document.cookie = "listCart=" + JSON.stringify(listCart) + "; expires=" + expirationDate.toUTCString() + "; path=/;";
         addCartToHTML();
     }
 
@@ -455,7 +457,9 @@ else {
                 break;
         }
         // Save new data in cookie
-        document.cookie = "listCart=" + JSON.stringify(listCart) + "; expires=Thu, 31 Dec 2025 23:59:59 UTC; path=/;";
+        const expirationDate = new Date();
+        expirationDate.setDate(expirationDate.getDate() + 365);
+        document.cookie = "listCart=" + JSON.stringify(listCart) + "; expires=" + expirationDate.toUTCString() + "; path=/;";
         addCartToHTML(); // Reload HTML view cart
     }
 
