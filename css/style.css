@@ -107,13 +107,17 @@ header .totalQuantity {
 
 @media screen and (max-width: 640px) {
     header .iconCart {
-        margin-left: 15%;
+        margin-left: 10%;
     }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 480px) {
     header .iconCart {
-        margin-left: 10%;
+        margin-left: 5%;
+    }
+
+    header a .logo {
+        display: none;
     }
 }
 
