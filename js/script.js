@@ -76,6 +76,8 @@ if (filename === "checkout.html") {
 
             if (response.ok) {
                 console.log('Checkout successful.');
+                // Add this line to delete the 'listCart' cookie
+                deleteCartCookie();
                 window.location.href = 'history.html';
             } else {
                 console.error('Checkout failed:', data.error);
@@ -213,7 +215,7 @@ else if (filename === "login.html") {
                 const expirationDate = new Date();
 
                 // Set the expiration to 7 days from now
-                expirationDate.setDate(expirationDate.getDate() + 7);
+                expirationDate.setDate(expirationDate.getDate() + 1);
                 document.cookie = `userID=${data.userID}; expires=${expirationDate.toUTCString()}; path=/;`;
 
                 console.log('Login successful. User ID:', data.userID);
@@ -480,4 +482,9 @@ function getUserID() {
     if (cookieValue) {
         userID = JSON.parse(cookieValue.split('=')[1]);
     }
+}
+
+function deleteCartCookie() {
+    listCart = [];
+    document.cookie = 'listCart=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
 }

@@ -31,7 +31,7 @@ header {
     height: 60px;
     background-color: rgba(241, 62, 21, .8);
     backdrop-filter: blur(10px);
-    box-shadow: 0 10px 10px #5555;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     grid-template-columns: 50px 1fr 50px;
     grid-template-rows: 50px;
     justify-content: center;
@@ -316,7 +316,7 @@ svg {
 .listProduct .item {
     position: relative;
     margin: 25px 0;
-    box-shadow: 0 10px 20px #8888;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .listProduct .item h2 {
